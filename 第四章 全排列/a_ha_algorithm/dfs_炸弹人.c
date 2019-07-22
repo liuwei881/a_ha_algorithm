@@ -1,3 +1,4 @@
+#if 0
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -86,3 +87,4 @@ void dfs(int x, int y)
 		}
 	}
 }
+#endif

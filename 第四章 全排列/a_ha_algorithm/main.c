@@ -1,7 +1,8 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include "head.h"
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include "head.h"
 
+#if 0
 struct note
 {
 	int x;
@@ -12,7 +13,6 @@ struct note que[401];
 
 int main()
 {
-#if 0
 	scanf("%d", &n);
 	dfs(1);
 	dfs_match(1);
@@ -99,7 +99,6 @@ int main()
 	}
 	head++;//对后面的点进行扩展
 	//最后输出这个点和最多可以消灭的敌人数
-#endif
 	int i, startx, starty;
 	//读入n和m, n表示行, m表示列
 	scanf("%d %d %d %d", &n, &m, &startx, &starty);
@@ -115,5 +114,27 @@ int main()
 	my = starty;
 	dfs(startx, starty);
 	printf("将炸弹放置在(%d, %d), 最多可以消灭%d个敌人\n", mx, my, max);
+	int i, j, num = 0;
+	scanf("%d %d", &n, &m);
+	//读入游戏地图
+	for (i = 1; i <= n; i++)
+	{
+		for (j = 1; j <= m; j++)
+		{
+			scanf("%d", &a[i][j]);
+		}
+	}
+	//开始搜索, 从1,1点开始, 进水方向也是1
+	dfs_g(1, 1, 1);
+	//判断是否找到铺设方案
+	if (flag == 0)
+	{
+		printf("impossible\n");
+	}
+	else
+	{
+		printf("找到铺设方案\n");
+	}
 	return 0;
 }
+#endif

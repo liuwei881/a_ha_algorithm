@@ -1,6 +1,6 @@
-#include <stdio.h>
+//#include <stdio.h>
 
-
+#if 0
 char a[20][21]; //ÓÃÀ´´æ´¢µØÍ¼
 
 int getnum(int i, int j)
@@ -54,3 +54,4 @@ int getnum(int i, int j)
 	}
 	return sum;
 }
+#endif
